@@ -6,7 +6,7 @@ redis-py library.
 """
 from setuptools import setup
 
-version = '0.1'
+version = '0.2'
 
 setup(
     name='Flask-Redis',
