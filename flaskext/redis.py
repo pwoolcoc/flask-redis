@@ -1,5 +1,5 @@
 """Flask integration for Redis"""
-
+from __future__ import absolute_import
 import redis as _redis
 
 class Redis(object):
