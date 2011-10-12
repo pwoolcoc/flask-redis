@@ -1,6 +1,6 @@
 """Flask integration for Redis"""
 
-import redis
+import redis as _redis
 
 class Redis(object):
     def __init__(self, app=None):
@@ -16,7 +16,7 @@ class Redis(object):
         self.app.config.setdefault(u"REDIS_PORT", 6379)
         self.app.config.setdefault(u"REDIS_DB", 0)
         self.app.config.setdefault(u"REDIS_PASSWORD", None)
-        self.redis_instance = redis.Redis(host=self.app.config[u"REDIS_HOST"],
+        self.redis_instance = _redis.Redis(host=self.app.config[u"REDIS_HOST"],
                                           port=self.app.config[u"REDIS_PORT"],
                                           db=self.app.config[u"REDIS_DB"],
                                           password=self.app.config[u"REDIS_PASSWORD"])
